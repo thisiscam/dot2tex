@@ -5,8 +5,8 @@ import sys
 import tempfile
 from subprocess import Popen, PIPE
 
-from . import dotparsing
-from .utils import nsplit, chunks, escape_texchars, smart_float, replace_tags, is_multiline_label
+from dot2tex import dotparsing
+from dot2tex.utils import nsplit, chunks, escape_texchars, smart_float, replace_tags, is_multiline_label
 
 # initialize logging module
 log = logging.getLogger("dot2tex")

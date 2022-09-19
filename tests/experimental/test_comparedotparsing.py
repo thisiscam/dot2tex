@@ -6,15 +6,14 @@ parsed and saved version.
 
 import unittest
 
-#import dot2tex.dotparsing as dotp
-from dot2tex import dotparsing
 import re, os, shutil, glob, sys, time
 
 from PIL import ImageChops, Image
 
 from os.path import join, basename, splitext, normpath
-from dot2tex import dotparsing
 import logging
+
+from dot2tex import dotparsing
 
 # intitalize logging module
 log = logging.getLogger("test_graphparser")
@@ -113,10 +112,8 @@ def test_dotfile(filename):
 
 class DotparsingTest(unittest.TestCase):
     def setUp(self):
-        if not os.path.exists(PNG_DIR):
-            os.mkdir(PNG_DIR)
-        if not os.path.exists(DOT_DIR):
-            os.mkdir(DOT_DIR)
+        os.makedirs(PNG_DIR, exist_ok=True)
+        os.makedirs(DOT_DIR, exist_ok=True)
 
     def test_ids(self):
         self.assertEqual(test_dotfile("ids.dot"), 1)

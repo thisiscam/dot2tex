@@ -27,9 +27,9 @@ Copyright (c) 2006-2019, Kjell Magne Fauske
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
-from .base import DEFAULT_TEXTENCODING, DEFAULT_OUTPUT_FORMAT
-from .pgfformat import Dot2PGFConv, Dot2TikZConv, PositionsDotConv
-from .pstricksformat import Dot2PSTricksConv, Dot2PSTricksNConv
+from dot2tex.base import DEFAULT_TEXTENCODING, DEFAULT_OUTPUT_FORMAT
+from dot2tex.pgfformat import Dot2PGFConv, Dot2TikZConv, PositionsDotConv
+from dot2tex.pstricksformat import Dot2PSTricksConv, Dot2PSTricksNConv
 
 __author__ = 'Kjell Magne Fauske'
 __version__ = '2.12.dev'

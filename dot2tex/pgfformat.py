@@ -1,7 +1,7 @@
 import logging
 
-from .base import DotConvBase, parse_drawstring
-from .utils import smart_float, nsplit, getboolattr, tikzify
+from dot2tex.base import DotConvBase, parse_drawstring
+from dot2tex.utils import smart_float, nsplit, getboolattr, tikzify
 
 log = logging.getLogger("dot2tex")
 

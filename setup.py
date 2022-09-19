@@ -29,16 +29,12 @@ Graphviz_, a more LaTeX friendly look and feel. This is accomplished by:
           'License :: OSI Approved :: MIT License',
           'Natural Language :: English',
           'Operating System :: OS Independent',
-          'Programming Language :: Python :: 2',
-          'Programming Language :: Python :: 2.7',
           'Programming Language :: Python :: 3',
-          'Programming Language :: Python :: 3.5',
-          'Programming Language :: Python :: 3.6',
-          'Programming Language :: Python :: 3.7',
           'Topic :: Scientific/Engineering :: Visualization',
           'Topic :: Text Processing :: Markup :: LaTeX',
           'Topic :: Utilities',
       ],
+      python_requires='>=3.5',
       install_requires=['pyparsing'],
       entry_points={
           'console_scripts': [

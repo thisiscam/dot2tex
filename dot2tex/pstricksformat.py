@@ -1,7 +1,7 @@
 import logging
 
-from .base import DotConvBase
-from .utils import smart_float, tikzify
+from dot2tex.base import DotConvBase
+from dot2tex.utils import smart_float, tikzify
 
 log = logging.getLogger("dot2tex")
 

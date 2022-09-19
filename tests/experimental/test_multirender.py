@@ -265,8 +265,7 @@ class RenderTest(unittest.TestCase):
     cmplist = []
 
     def setUp(self):
-        if not os.path.exists(DEST_DIR):
-            os.mkdir(DEST_DIR)
+        os.makedirs(DEST_DIR, exist_ok=True)
 
     def test_autosize(self):
         fn = 'autosize.dot'

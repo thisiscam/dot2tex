@@ -1,4 +1,4 @@
-from . import dotparsing
+from dot2tex import dotparsing
 
 # Inch to bp conversion factor
 INCH2BP = 72.0
