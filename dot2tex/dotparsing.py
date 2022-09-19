@@ -347,7 +347,6 @@ class DotDataParser(object):
             else:
                 # ordinary edge
                 edgelist.append((ADD_EDGE, src, dest, opts))
-
         return edgelist
 
     def _proc_default_attr_stmt(self, toks):
@@ -475,12 +474,12 @@ class DotDataParser(object):
         edgeRHS = OneOrMore(edgeop + edge_point)
         edge_stmt = edge_point + edgeRHS + Optional(attr_list)
 
-        subgraph = (Optional(subgraph_, '') + Optional(ID, '') + Group(graph_stmt)).setName("subgraph").setResultsName(
+        subgraph = (Optional(subgraph_ + Optional(ID, '')) + Group(graph_stmt)).setName("subgraph").setResultsName(
                 'ssubgraph')
 
         edge_point <<= (subgraph | graph_stmt | node_id)
 
-        node_stmt = (node_id + Optional(attr_list) + Optional(semi)).setName("node_stmt")
+        node_stmt = (node_id + Optional(attr_list)).setName("node_stmt")
 
         assignment = (ID + equals + righthand_id).setName("assignment")
         stmt = (assignment | edge_stmt | attr_stmt | subgraph | graph_stmt | node_stmt).setName("stmt")
